@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import { routeGenerator } from '../utils/routeGenerator';
 import { AuthPath } from './auth.routes';
-import AuthRoutes from '../components/layout/AuthRoutes';
+import DashboardLayoutBranding from '../components/layout/DashboardLayout';
 
 const router = createBrowserRouter([
     // {
@@ -14,6 +14,10 @@ const router = createBrowserRouter([
     //     ),
     //     children: routeGenerator(AuthPath),
     // },
+    {
+        path: '/',
+        element: <DashboardLayoutBranding />,
+    },
     {
         path: '/',
         element: <App />,
